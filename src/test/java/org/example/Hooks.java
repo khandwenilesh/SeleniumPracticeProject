@@ -35,7 +35,7 @@ public class Hooks {
         String executionType = System.getProperty("remote", "local");
         if (executionType.equalsIgnoreCase("remote")) {
 
-            System.out.println("Running in DOCKER / GRID mode");
+            System.out.println("Running in DOCKER / GRID mode runnin");
 
              driver =new RemoteWebDriver(
                     URI.create("http://localhost:4444").toURL(),
