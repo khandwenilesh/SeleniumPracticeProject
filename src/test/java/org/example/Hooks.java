@@ -32,13 +32,13 @@ public class Hooks {
         // create a ChromeDriver and register it in TestContext
         //ChromeDriver driver = new ChromeDriver(options);
        WebDriver driver;
-        String executionType = System.getProperty("remote", "local");
+        String executionType = System.getProperty("execution", "local");
         if (executionType.equalsIgnoreCase("remote")) {
 
             System.out.println("Running in DOCKER / GRID mode runnin");
 
              driver =new RemoteWebDriver(
-                    URI.create("http://localhost:4444").toURL(),
+                    URI.create("http://chrome:4444").toURL(),
                     options);
 
         } else {
