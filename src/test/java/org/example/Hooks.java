@@ -43,7 +43,7 @@ public class Hooks {
 
         } else {
 
-            System.out.println("Running in LOCAL mode");
+            System.out.println("Running in LOCAL mode -Testing");
 
             driver=new ChromeDriver(options);
         }
