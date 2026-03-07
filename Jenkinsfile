@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-  
+    parameters {
+                 string(name: 'TAGS', defaultValue: '@smoke', description: 'Cucumber tags')
+             }
     stages {
 
-       parameters {
-               string(name: 'TAGS', defaultValue: '@smoke', description: 'Cucumber tags')
-           }
+
 
            stages {
                stage('Run Tests') {
