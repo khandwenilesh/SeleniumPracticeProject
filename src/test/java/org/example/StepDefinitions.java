@@ -20,7 +20,7 @@ public class StepDefinitions extends BaseSteps {
     public void the_page_title_should_contain(String expected) {
         String title = driver().getTitle();
         assertTrue(title.contains(expected), "Title did not contain expected text. Actual: " + title);
-        System.out.println("Verified title contains: '" + expected + "' -> Actual title: " + title);
+        System.out.println("verified title contains: '" + expected + "' -> Actual title: " + title);
     }
 
     @Then("I enter the personal details")
