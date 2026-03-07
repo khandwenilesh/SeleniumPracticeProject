@@ -4,14 +4,19 @@ pipeline {
   
     stages {
 
-        stage('Build & Test') {
-            steps {
-                bat 'mvn clean test -Dexecution=remote'
-            }
-        }
+       parameters {
+               string(name: 'TAGS', defaultValue: '@smoke', description: 'Cucumber tags')
+           }
 
-        stage('Publish Test Results') {
-            steps {
+           stages {
+               stage('Run Tests') {
+                   steps {
+                       sh 'mvn clean test -Dcucumber.filter.tags=${TAGS}'
+                   }
+
+
+             stage('Publish Test Results') {
+                steps {
                 junit '**/target/surefire-reports/*.xml'
             }
         }
