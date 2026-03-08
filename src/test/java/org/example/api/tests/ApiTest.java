@@ -1,8 +1,9 @@
-package org.example.api;
+package org.example.api.tests;
 
 
 import io.restassured.response.Response;
-import org.example.api.models.Post;
+import org.example.api.ApiConfig;
+import org.example.api.models.UserResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ApiTest extends ApiConfig {
 
-    Post post = new Post();
 
+     UserResponse post = new UserResponse();
 
     @Test
     @DisplayName("Sample POJO test")

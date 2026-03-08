@@ -4,6 +4,8 @@ package org.example;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.restassured.RestAssured;
+import org.example.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -46,6 +48,8 @@ public class Hooks {
             System.out.println("Running in LOCAL mode -Testing");
 
             driver=new ChromeDriver(options);
+
+
         }
 
         TestContext.setDriver(driver);
